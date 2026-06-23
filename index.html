@@ -1,23 +1,48 @@
 <!DOCTYPE html>
+<!-- กำหนดว่าเอกสารนี้ใช้มาตรฐาน HTML5 -->
+
 <html lang="th">
+<!-- จุดเริ่มต้นของหน้าเว็บ และกำหนดภาษาหลักเป็นภาษาไทย -->
+
 <head>
+
     <meta charset="UTF-8">
+    <!-- รองรับตัวอักษรภาษาไทยและภาษาอื่น ๆ -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ทำให้เว็บแสดงผลได้เหมาะสมบนมือถือและแท็บเล็ต -->
+
     <title>DevPool 2569 - แนะนำตัว</title>
+    <!-- ข้อความที่แสดงบนแท็บของ Browser -->
 
     <link rel="stylesheet" href="style.css">
+    <!-- เชื่อมไฟล์ CSS เพื่อใช้ตกแต่งหน้าเว็บ -->
+
 </head>
+
 <body>
+<!-- ส่วนที่ผู้ใช้มองเห็นบนหน้าเว็บ -->
 
     <div class="container">
+    <!-- กล่องหลักสำหรับครอบเนื้อหาทั้งหมด -->
 
         <header>
+        <!-- ส่วนหัวของเว็บไซต์ -->
+
             <h1>สวัสดีครับ</h1>
+            <!-- หัวข้อหลักของหน้า -->
+
             <h2>ผม สุฒิ ฤทธิจันทร์</h2>
+            <!-- ชื่อผู้จัดทำ -->
+
             <p>พนักงานการไฟฟ้าส่วนภูมิภาค (PEA)</p>
+            <!-- ตำแหน่งหรือหน่วยงาน -->
+
         </header>
 
         <section class="card">
+        <!-- การ์ดแสดงข้อมูลเกี่ยวกับตัวเอง -->
+
             <h3>เกี่ยวกับผม</h3>
 
             <p>
@@ -29,60 +54,112 @@
                 ต้องการเข้าร่วม DevPool เพื่อพัฒนาทักษะด้าน Software Development
                 และนำความรู้ไปประยุกต์ใช้กับงานภายในองค์กร
             </p>
+
         </section>
 
         <section class="card">
+        <!-- การ์ดแสดงความสนใจส่วนตัว -->
+
             <h3>ความสนใจ</h3>
 
             <ul>
+                <!-- รายการแบบ Bullet -->
+
                 <li>Python</li>
                 <li>Artificial Intelligence</li>
                 <li>Automation</li>
                 <li>Game Development (Godot)</li>
+
             </ul>
+
         </section>
 
-<section class="card">
+        <section class="card">
+        <!-- ส่วนปุ่มเปลี่ยนธีม -->
 
-    <button id="themeBtn">
-        🌙 เปลี่ยนธีม
-    </button>
+            <button id="themeBtn">
+                🌙 เปลี่ยนธีม
+            </button>
 
-</section>
+            <!--
+            id="themeBtn"
+            ใช้เป็นชื่ออ้างอิงให้ JavaScript
+            หาเจอและนำไปใช้งานได้
+            -->
 
-<section class="card">
+        </section>
 
-    <button id="infoBtn">
-        แสดงข้อมูลเพิ่มเติม
-    </button>
+        <section class="card">
+        <!-- ส่วนแสดงข้อมูลเพิ่มเติม -->
 
-    <div id="extraInfo" style="display:none; margin-top:15px;">
+            <button id="infoBtn">
+                แสดงข้อมูลเพิ่มเติม
+            </button>
 
-        <p>กำลังศึกษา AI และ Automation</p>
-        <p>สนใจการพัฒนาโปรแกรมด้วย Python</p>
-        <p>กำลังเรียนรู้การสร้างเกมด้วย Godot</p>
+            <!-- ปุ่มสำหรับเปิด/ปิดข้อมูลเพิ่มเติม -->
 
-    </div>
+            <div id="extraInfo" style="display:none; margin-top:15px;">
 
-</section>
+                <!--
+                display:none
+                ซ่อนข้อมูลไว้ก่อน
+                จะถูก JavaScript สั่งให้แสดงภายหลัง
+                -->
 
-<section class="card">
+                <p>กำลังศึกษา AI และ Automation</p>
+                <p>สนใจการพัฒนาโปรแกรมด้วย Python</p>
+                <p>กำลังเรียนรู้การสร้างเกมด้วย Godot</p>
 
-    <h3>ลองพิมพ์ข้อความ</h3>
+            </div>
 
-    <input
-        type="text"
-        id="userInput"
-        placeholder="พิมพ์ข้อความ..."
-    >
+        </section>
 
-    <p id="outputText"></p>
+        <section class="card">
+        <!-- ส่วนทดลองรับข้อมูลจากผู้ใช้ -->
 
-</section>
+            <h3>ลองพิมพ์ข้อความ</h3>
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="พิมพ์ข้อความ..."
+            >
+
+            <!--
+            input ใช้รับข้อความจากผู้ใช้
+
+            type="text"
+            คือช่องกรอกข้อความทั่วไป
+
+            id="userInput"
+            ใช้ให้ JavaScript หาเจอ
+
+            placeholder
+            คือข้อความตัวอย่างที่แสดงก่อนพิมพ์
+            -->
+
+            <p id="outputText"></p>
+
+            <!--
+            ตำแหน่งสำหรับแสดงข้อความ
+            ที่ผู้ใช้พิมพ์เข้ามา
+            -->
+
+        </section>
 
     </div>
 
     <script src="script.js"></script>
 
+    <!--
+    เชื่อมไฟล์ JavaScript
+
+    JavaScript จะทำหน้าที่
+    - เปลี่ยน Dark Mode
+    - แสดงข้อมูลเพิ่มเติม
+    - แสดงข้อความที่ผู้ใช้พิมพ์
+    -->
+
 </body>
+
 </html>
