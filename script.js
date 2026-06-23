@@ -138,7 +138,7 @@ weatherBtn.addEventListener("click", async () => {
     try {
 
         const response = await fetch(
-            "https://api.open-meteo.com/v1/forecast?latitude=14.3532&longitude=100.5689&current=temperature_2m"
+            "https://api.open-meteo.com/v1/forecast?latitude=14.3136453&longitude=100.4140084&current=temperature_2m"
         );
 
         const data = await response.json();
